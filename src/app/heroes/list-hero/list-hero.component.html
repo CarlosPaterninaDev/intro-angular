@@ -1,0 +1,16 @@
+<h1>list-hero works!</h1>
+
+<button (click)="removeHero()">remove hero</button>
+
+<div *ngIf="erasedHero; else noErased">
+  <h3>Erased Hero: {{ erasedHero }}</h3>
+</div>
+
+<ng-template #noErased>
+  <h3>...</h3>
+</ng-template>
+
+<ul>
+  <!-- <li>{{ heroes[0] }}</li> -->
+  <li *ngFor="let hero of heroes; let i = index">{{ i + 1 }} {{ hero }}</li>
+</ul>
