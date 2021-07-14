@@ -3,33 +3,10 @@
 
 <div class="row">
   <div class="col">
-    <h3>Characters</h3>
-    <hr />
-
-    <ul>
-      <li *ngFor="let character of characters">
-        {{ character.name }} - {{ character.atk | number }}
-      </li>
-    </ul>
+    <app-characters></app-characters>
   </div>
 
   <div class="col">
-    <h3>Add</h3>
-    <hr />
-    <form (ngSubmit)="handleAdd()">
-      <input
-        type="text"
-        name="name"
-        placeholder="name"
-        [(ngModel)]="newCharacter.name"
-      />
-      <input
-        type="number"
-        name="atk"
-        placeholder="atk"
-        [(ngModel)]="newCharacter.atk"
-      />
-      <button>Add</button>
-    </form>
+    <app-add-characters></app-add-characters>
   </div>
 </div>
